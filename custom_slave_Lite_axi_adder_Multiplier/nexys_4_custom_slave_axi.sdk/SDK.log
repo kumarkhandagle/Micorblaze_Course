@@ -1,0 +1,142 @@
+14:30:35 INFO  : Registering command handlers for SDK TCF services
+14:30:36 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\labview\nexys_4_custom_slave_axi\nexys_4_custom_slave_axi.sdk\temp_xsdb_launch_script.tcl
+14:30:41 INFO  : XSCT server has started successfully.
+14:30:43 INFO  : Successfully done setting XSCT server connection channel  
+14:30:43 INFO  : Successfully done setting SDK workspace  
+14:30:43 INFO  : Processing command line option -hwspec C:/Users/labview/nexys_4_custom_slave_axi/nexys_4_custom_slave_axi.sdk/design_1_wrapper.hdf.
+14:35:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:35:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A" && level==0} -index 0' command is executed.
+14:35:51 INFO  : FPGA configured successfully with bitstream "C:/Users/labview/nexys_4_custom_slave_axi/nexys_4_custom_slave_axi.sdk/design_1_wrapper_hw_platform_0/download.bit"
+14:36:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A" && level==0} -index 0' command is executed.
+14:36:06 INFO  : 'fpga -state' command is executed.
+14:36:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:36:06 INFO  : Jtag cable 'Digilent Nexys4DDR 210292744993A' is selected.
+14:36:06 INFO  : 'jtag frequency' command is executed.
+14:36:06 INFO  : Context for processor 'microblaze_0' is selected.
+14:36:06 INFO  : Processor reset is completed for 'microblaze_0'.
+14:36:06 INFO  : Context for processor 'microblaze_0' is selected.
+14:36:06 INFO  : The application 'C:/Users/labview/nexys_4_custom_slave_axi/nexys_4_custom_slave_axi.sdk/top_mul/Debug/top_mul.elf' is downloaded to processor 'microblaze_0'.
+14:36:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+dow C:/Users/labview/nexys_4_custom_slave_axi/nexys_4_custom_slave_axi.sdk/top_mul/Debug/top_mul.elf
+----------------End of Script----------------
+
+14:36:06 INFO  : Memory regions updated for context MicroBlaze #0
+14:36:06 INFO  : Memory regions updated for context MicroBlaze #0
+14:36:06 INFO  : Context for processor 'microblaze_0' is selected.
+14:36:06 INFO  : 'con' command is executed.
+14:36:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+con
+----------------End of Script----------------
+
+14:36:06 INFO  : Launch script is exported to file 'C:\Users\labview\nexys_4_custom_slave_axi\nexys_4_custom_slave_axi.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_top_mul.elf_on_local.tcl'
+14:36:25 INFO  : Disconnected from the channel tcfchan#1.
+14:36:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A" && level==0} -index 0' command is executed.
+14:36:26 INFO  : 'fpga -state' command is executed.
+14:36:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:36:26 INFO  : Jtag cable 'Digilent Nexys4DDR 210292744993A' is selected.
+14:36:26 INFO  : 'jtag frequency' command is executed.
+14:36:26 INFO  : Context for processor 'microblaze_0' is selected.
+14:36:26 INFO  : Processor reset is completed for 'microblaze_0'.
+14:36:26 INFO  : Context for processor 'microblaze_0' is selected.
+14:36:26 INFO  : The application 'C:/Users/labview/nexys_4_custom_slave_axi/nexys_4_custom_slave_axi.sdk/top_mul/Debug/top_mul.elf' is downloaded to processor 'microblaze_0'.
+14:36:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+dow C:/Users/labview/nexys_4_custom_slave_axi/nexys_4_custom_slave_axi.sdk/top_mul/Debug/top_mul.elf
+----------------End of Script----------------
+
+14:36:26 INFO  : Memory regions updated for context MicroBlaze #0
+14:36:26 INFO  : Memory regions updated for context MicroBlaze #0
+14:36:26 INFO  : Context for processor 'microblaze_0' is selected.
+14:36:26 INFO  : 'con' command is executed.
+14:36:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+con
+----------------End of Script----------------
+
+14:36:26 INFO  : Launch script is exported to file 'C:\Users\labview\nexys_4_custom_slave_axi\nexys_4_custom_slave_axi.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_top_mul.elf_on_local.tcl'
+14:36:51 INFO  : Disconnected from the channel tcfchan#2.
+14:36:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A" && level==0} -index 0' command is executed.
+14:36:52 INFO  : 'fpga -state' command is executed.
+14:36:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:36:52 INFO  : Jtag cable 'Digilent Nexys4DDR 210292744993A' is selected.
+14:36:52 INFO  : 'jtag frequency' command is executed.
+14:36:52 INFO  : Context for processor 'microblaze_0' is selected.
+14:36:52 INFO  : Processor reset is completed for 'microblaze_0'.
+14:36:52 INFO  : Context for processor 'microblaze_0' is selected.
+14:36:52 INFO  : The application 'C:/Users/labview/nexys_4_custom_slave_axi/nexys_4_custom_slave_axi.sdk/top_mul/Debug/top_mul.elf' is downloaded to processor 'microblaze_0'.
+14:36:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+dow C:/Users/labview/nexys_4_custom_slave_axi/nexys_4_custom_slave_axi.sdk/top_mul/Debug/top_mul.elf
+----------------End of Script----------------
+
+14:36:52 INFO  : Memory regions updated for context MicroBlaze #0
+14:36:52 INFO  : Memory regions updated for context MicroBlaze #0
+14:36:52 INFO  : Context for processor 'microblaze_0' is selected.
+14:36:52 INFO  : 'con' command is executed.
+14:36:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+con
+----------------End of Script----------------
+
+14:36:52 INFO  : Launch script is exported to file 'C:\Users\labview\nexys_4_custom_slave_axi\nexys_4_custom_slave_axi.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_top_mul.elf_on_local.tcl'
+14:39:18 INFO  : Disconnected from the channel tcfchan#3.
+14:44:56 INFO  : Registering command handlers for SDK TCF services
+14:44:56 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\labview\nexys_4_custom_slave_axi\nexys_4_custom_slave_axi.sdk\temp_xsdb_launch_script.tcl
+14:44:58 INFO  : XSCT server has started successfully.
+14:44:58 INFO  : Successfully done setting XSCT server connection channel  
+14:44:59 INFO  : Successfully done setting SDK workspace  
+14:44:59 INFO  : Processing command line option -hwspec C:/Users/labview/nexys_4_custom_slave_axi/nexys_4_custom_slave_axi.sdk/design_1_wrapper.hdf.
+14:44:59 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+14:45:00 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1609578806125,  Project:1609577951866
+14:45:00 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from C:/Users/labview/nexys_4_custom_slave_axi/nexys_4_custom_slave_axi.sdk/design_1_wrapper.hdf.
+14:45:00 INFO  : Copied contents of C:/Users/labview/nexys_4_custom_slave_axi/nexys_4_custom_slave_axi.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+14:45:00 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:45:02 INFO  : 
+14:45:03 INFO  : Updating hardware inferred compiler options for top_mul.
+14:45:03 INFO  : Clearing existing target manager status.
+14:45:03 WARN  : Given IPC port value is invalid. Using default port 2350
+14:45:03 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+14:45:05 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+14:46:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:46:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A" && level==0} -index 0' command is executed.
+14:46:23 INFO  : FPGA configured successfully with bitstream "C:/Users/labview/nexys_4_custom_slave_axi/nexys_4_custom_slave_axi.sdk/design_1_wrapper_hw_platform_0/download.bit"
+14:46:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A" && level==0} -index 0' command is executed.
+14:46:43 INFO  : 'fpga -state' command is executed.
+14:46:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:46:43 INFO  : Jtag cable 'Digilent Nexys4DDR 210292744993A' is selected.
+14:46:43 INFO  : 'jtag frequency' command is executed.
+14:46:43 INFO  : Context for processor 'microblaze_0' is selected.
+14:46:43 INFO  : Processor reset is completed for 'microblaze_0'.
+14:46:43 INFO  : Context for processor 'microblaze_0' is selected.
+14:46:43 INFO  : The application 'C:/Users/labview/nexys_4_custom_slave_axi/nexys_4_custom_slave_axi.sdk/top_mul/Debug/top_mul.elf' is downloaded to processor 'microblaze_0'.
+14:46:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+dow C:/Users/labview/nexys_4_custom_slave_axi/nexys_4_custom_slave_axi.sdk/top_mul/Debug/top_mul.elf
+----------------End of Script----------------
+
+14:46:43 INFO  : Memory regions updated for context MicroBlaze #0
+14:46:43 INFO  : Memory regions updated for context MicroBlaze #0
+14:46:43 INFO  : Context for processor 'microblaze_0' is selected.
+14:46:43 INFO  : 'con' command is executed.
+14:46:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+con
+----------------End of Script----------------
+
+14:46:43 INFO  : Launch script is exported to file 'C:\Users\labview\nexys_4_custom_slave_axi\nexys_4_custom_slave_axi.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_top_mul.elf_on_local.tcl'
+14:46:49 INFO  : Disconnected from the channel tcfchan#1.
+14:46:51 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
