@@ -1,0 +1,25 @@
+
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+
+
+int main()
+{
+    init_platform();
+    int *p;
+     p = XPAR_MIG7SERIES_0_BASEADDR;
+     for(i=0;i<100;i++)
+     {
+    	 *(p+i) = i*5;
+     }
+
+     for(i = 0; i < 100;i++)
+     {
+    	 xil_printf("Data read : %0d\n",*(p+i));
+     }
+    cleanup_platform();
+    return 0;
+}
