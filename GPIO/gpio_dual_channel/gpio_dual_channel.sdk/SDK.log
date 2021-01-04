@@ -1,0 +1,37 @@
+15:21:52 INFO  : Registering command handlers for SDK TCF services
+15:21:53 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\labview\gpio_dual_channel\gpio_dual_channel.sdk\temp_xsdb_launch_script.tcl
+15:21:57 INFO  : XSCT server has started successfully.
+15:21:57 INFO  : Successfully done setting XSCT server connection channel  
+15:21:57 INFO  : Successfully done setting SDK workspace  
+15:21:57 INFO  : Processing command line option -hwspec C:/Users/labview/gpio_dual_channel/gpio_dual_channel.sdk/design_1_wrapper.hdf.
+15:31:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:31:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A" && level==0} -index 0' command is executed.
+15:31:04 INFO  : FPGA configured successfully with bitstream "C:/Users/labview/gpio_dual_channel/gpio_dual_channel.sdk/design_1_wrapper_hw_platform_0/download.bit"
+15:31:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A" && level==0} -index 0' command is executed.
+15:31:11 INFO  : 'fpga -state' command is executed.
+15:31:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:31:11 INFO  : Jtag cable 'Digilent Nexys4DDR 210292744993A' is selected.
+15:31:11 INFO  : 'jtag frequency' command is executed.
+15:31:11 INFO  : Context for processor 'microblaze_0' is selected.
+15:31:11 INFO  : Processor reset is completed for 'microblaze_0'.
+15:31:11 INFO  : Context for processor 'microblaze_0' is selected.
+15:31:11 INFO  : The application 'C:/Users/labview/gpio_dual_channel/gpio_dual_channel.sdk/top/Debug/top.elf' is downloaded to processor 'microblaze_0'.
+15:31:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+dow C:/Users/labview/gpio_dual_channel/gpio_dual_channel.sdk/top/Debug/top.elf
+----------------End of Script----------------
+
+15:31:12 INFO  : Memory regions updated for context MicroBlaze #0
+15:31:12 INFO  : Memory regions updated for context MicroBlaze #0
+15:31:12 INFO  : Context for processor 'microblaze_0' is selected.
+15:31:12 INFO  : 'con' command is executed.
+15:31:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292744993A"} -index 0
+con
+----------------End of Script----------------
+
+15:31:12 INFO  : Launch script is exported to file 'C:\Users\labview\gpio_dual_channel\gpio_dual_channel.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_top.elf_on_local.tcl'
+15:31:53 INFO  : Disconnected from the channel tcfchan#1.

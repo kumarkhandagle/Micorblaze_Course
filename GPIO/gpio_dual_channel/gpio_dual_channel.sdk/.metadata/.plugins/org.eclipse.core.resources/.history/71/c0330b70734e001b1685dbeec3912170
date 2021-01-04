@@ -1,0 +1,28 @@
+
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xgpio.h"
+
+XGpio_Config *gC;
+XGpio gI;
+
+
+
+void gpioInit(){
+
+	gC = XGpio_LookupConfig(XPAR_AXI_GPIO_0_DEVICE_ID);
+	XGpio_CfgInitialize(&gI, gC, gC->BaseAddress);
+}
+
+int main()
+{
+    init_platform();
+
+    print("Hello World\n\r");
+
+    cleanup_platform();
+    return 0;
+}
