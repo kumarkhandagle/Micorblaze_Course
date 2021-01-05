@@ -1,0 +1,772 @@
+20:55:49 **** Build of project top_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_7/src"
+make -C microblaze_0/libsrc/intc_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_5/src"
+make -C microblaze_0/libsrc/standalone_v6_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_7/src"
+make -C microblaze_0/libsrc/intc_v3_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_5/src"
+make -C microblaze_0/libsrc/standalone_v6_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+20:55:56 **** Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3152	    308	   3108	   6568	   19a8	top.elf
+'Finished building: top.elf.size'
+' '
+20:56:21 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3152	    308	   3108	   6568	   19a8	top.elf
+'Finished building: top.elf.size'
+' '
+21:07:34 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2972	    308	   3112	   6392	   18f8	top.elf
+'Finished building: top.elf.size'
+' '
+21:08:47 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2972	    308	   3112	   6392	   18f8	top.elf
+'Finished building: top.elf.size'
+' '
+21:10:06 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2972	    308	   3112	   6392	   18f8	top.elf
+'Finished building: top.elf.size'
+' '
+21:11:48 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrInit':
+../src/helloworld.c:32:31: warning: passing argument 1 of 'Xil_ExceptionRegisterHandler' makes integer from pointer without a cast [-Wint-conversion]
+  Xil_ExceptionRegisterHandler(&iI, (Xil_ExceptionHandler)XIntc_InterruptHandler, &gI);
+                               ^
+In file included from ../../top_bsp/microblaze_0/include/mb_interface.h:54:0,
+                 from ../../top_bsp/microblaze_0/include/xil_io.h:68,
+                 from ../../top_bsp/microblaze_0/include/xintc_l.h:99,
+                 from ../../top_bsp/microblaze_0/include/xintc.h:236,
+                 from ../src/helloworld.c:5:
+../../top_bsp/microblaze_0/include/xil_exception.h:114:13: note: expected 'u32 {aka long unsigned int}' but argument is of type 'XIntc * {aka struct <anonymous> *}'
+ extern void Xil_ExceptionRegisterHandler(u32 Id,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2972	    308	   3112	   6392	   18f8	top.elf
+'Finished building: top.elf.size'
+' '
+21:12:16 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrInit':
+../src/helloworld.c:32:31: warning: passing argument 1 of 'Xil_ExceptionRegisterHandler' makes integer from pointer without a cast [-Wint-conversion]
+  Xil_ExceptionRegisterHandler(&iI, (Xil_ExceptionHandler)XIntc_InterruptHandler, &gI);
+                               ^
+In file included from ../../top_bsp/microblaze_0/include/mb_interface.h:54:0,
+                 from ../../top_bsp/microblaze_0/include/xil_io.h:68,
+                 from ../../top_bsp/microblaze_0/include/xintc_l.h:99,
+                 from ../../top_bsp/microblaze_0/include/xintc.h:236,
+                 from ../src/helloworld.c:5:
+../../top_bsp/microblaze_0/include/xil_exception.h:114:13: note: expected 'u32 {aka long unsigned int}' but argument is of type 'XIntc * {aka struct <anonymous> *}'
+ extern void Xil_ExceptionRegisterHandler(u32 Id,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2972	    308	   3112	   6392	   18f8	top.elf
+'Finished building: top.elf.size'
+' '
+21:13:21 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+21:13:57 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:19:1: error: expected expression before '}' token
+ }
+ ^
+../src/helloworld.c: In function 'IntrInit':
+../src/helloworld.c:32:31: warning: passing argument 1 of 'Xil_ExceptionRegisterHandler' makes integer from pointer without a cast [-Wint-conversion]
+  Xil_ExceptionRegisterHandler(&iI, (Xil_ExceptionHandler)XIntc_InterruptHandler, &gI);
+                               ^
+In file included from ../../top_bsp/microblaze_0/include/mb_interface.h:54:0,
+                 from ../../top_bsp/microblaze_0/include/xil_io.h:68,
+                 from ../../top_bsp/microblaze_0/include/xintc_l.h:99,
+                 from ../../top_bsp/microblaze_0/include/xintc.h:236,
+                 from ../src/helloworld.c:5:
+../../top_bsp/microblaze_0/include/xil_exception.h:114:13: note: expected 'u32 {aka long unsigned int}' but argument is of type 'XIntc * {aka struct <anonymous> *}'
+ extern void Xil_ExceptionRegisterHandler(u32 Id,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:49:5: warning: 'main' is normally a non-static function [-Wmain]
+ int main()
+     ^~~~
+../src/helloworld.c:57:1: error: expected declaration or statement at end of input
+ }
+ ^
+../src/helloworld.c:17:6: warning: unused variable 'data' [-Wunused-variable]
+  u32 data =
+      ^~~~
+At top level:
+../src/helloworld.c:49:5: warning: 'main' defined but not used [-Wunused-function]
+ int main()
+     ^~~~
+../src/helloworld.c:42:6: warning: 'gpioInit' defined but not used [-Wunused-function]
+ void gpioInit(){
+      ^~~~~~~~
+../src/helloworld.c:22:6: warning: 'IntrInit' defined but not used [-Wunused-function]
+ void IntrInit(){
+      ^~~~~~~~
+make: *** [src/helloworld.o] Error 1
+21:14:52 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrInit':
+../src/helloworld.c:34:31: warning: passing argument 1 of 'Xil_ExceptionRegisterHandler' makes integer from pointer without a cast [-Wint-conversion]
+  Xil_ExceptionRegisterHandler(&iI, (Xil_ExceptionHandler)XIntc_InterruptHandler, &gI);
+                               ^
+In file included from ../../top_bsp/microblaze_0/include/mb_interface.h:54:0,
+                 from ../../top_bsp/microblaze_0/include/xil_io.h:68,
+                 from ../../top_bsp/microblaze_0/include/xintc_l.h:99,
+                 from ../../top_bsp/microblaze_0/include/xintc.h:236,
+                 from ../src/helloworld.c:5:
+../../top_bsp/microblaze_0/include/xil_exception.h:114:13: note: expected 'u32 {aka long unsigned int}' but argument is of type 'XIntc * {aka struct <anonymous> *}'
+ extern void Xil_ExceptionRegisterHandler(u32 Id,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2972	    308	   3112	   6392	   18f8	top.elf
+'Finished building: top.elf.size'
+' '
+21:15:49 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrInit':
+../src/helloworld.c:34:31: warning: passing argument 1 of 'Xil_ExceptionRegisterHandler' makes integer from pointer without a cast [-Wint-conversion]
+  Xil_ExceptionRegisterHandler(&iI, (Xil_ExceptionHandler)XIntc_InterruptHandler, &gI);
+                               ^
+In file included from ../../top_bsp/microblaze_0/include/mb_interface.h:54:0,
+                 from ../../top_bsp/microblaze_0/include/xil_io.h:68,
+                 from ../../top_bsp/microblaze_0/include/xintc_l.h:99,
+                 from ../../top_bsp/microblaze_0/include/xintc.h:236,
+                 from ../src/helloworld.c:5:
+../../top_bsp/microblaze_0/include/xil_exception.h:114:13: note: expected 'u32 {aka long unsigned int}' but argument is of type 'XIntc * {aka struct <anonymous> *}'
+ extern void Xil_ExceptionRegisterHandler(u32 Id,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2972	    308	   3112	   6392	   18f8	top.elf
+'Finished building: top.elf.size'
+' '
+21:16:13 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrInit':
+../src/helloworld.c:34:31: warning: passing argument 1 of 'Xil_ExceptionRegisterHandler' makes integer from pointer without a cast [-Wint-conversion]
+  Xil_ExceptionRegisterHandler(&iI, (Xil_ExceptionHandler)XIntc_InterruptHandler, &gI);
+                               ^
+In file included from ../../top_bsp/microblaze_0/include/mb_interface.h:54:0,
+                 from ../../top_bsp/microblaze_0/include/xil_io.h:68,
+                 from ../../top_bsp/microblaze_0/include/xintc_l.h:99,
+                 from ../../top_bsp/microblaze_0/include/xintc.h:236,
+                 from ../src/helloworld.c:5:
+../../top_bsp/microblaze_0/include/xil_exception.h:114:13: note: expected 'u32 {aka long unsigned int}' but argument is of type 'XIntc * {aka struct <anonymous> *}'
+ extern void Xil_ExceptionRegisterHandler(u32 Id,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9188	    332	   3288	  12808	   3208	top.elf
+'Finished building: top.elf.size'
+' '
+21:16:15 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+21:17:09 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+21:18:06 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrInit':
+../src/helloworld.c:35:31: warning: passing argument 1 of 'Xil_ExceptionRegisterHandler' makes integer from pointer without a cast [-Wint-conversion]
+  Xil_ExceptionRegisterHandler(&iI, (Xil_ExceptionHandler)XIntc_InterruptHandler, &gI);
+                               ^
+In file included from ../../top_bsp/microblaze_0/include/mb_interface.h:54:0,
+                 from ../../top_bsp/microblaze_0/include/xil_io.h:68,
+                 from ../../top_bsp/microblaze_0/include/xintc_l.h:99,
+                 from ../../top_bsp/microblaze_0/include/xintc.h:236,
+                 from ../src/helloworld.c:5:
+../../top_bsp/microblaze_0/include/xil_exception.h:114:13: note: expected 'u32 {aka long unsigned int}' but argument is of type 'XIntc * {aka struct <anonymous> *}'
+ extern void Xil_ExceptionRegisterHandler(u32 Id,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9408	    332	   3284	  13024	   32e0	top.elf
+'Finished building: top.elf.size'
+' '
+21:18:07 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+21:18:11 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+21:19:59 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrInit':
+../src/helloworld.c:35:31: warning: passing argument 1 of 'Xil_ExceptionRegisterHandler' makes integer from pointer without a cast [-Wint-conversion]
+  Xil_ExceptionRegisterHandler(&iI, (Xil_ExceptionHandler)XIntc_InterruptHandler, &gI);
+                               ^
+In file included from ../../top_bsp/microblaze_0/include/mb_interface.h:54:0,
+                 from ../../top_bsp/microblaze_0/include/xil_io.h:68,
+                 from ../../top_bsp/microblaze_0/include/xintc_l.h:99,
+                 from ../../top_bsp/microblaze_0/include/xintc.h:236,
+                 from ../src/helloworld.c:5:
+../../top_bsp/microblaze_0/include/xil_exception.h:114:13: note: expected 'u32 {aka long unsigned int}' but argument is of type 'XIntc * {aka struct <anonymous> *}'
+ extern void Xil_ExceptionRegisterHandler(u32 Id,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9696	    332	   3284	  13312	   3400	top.elf
+'Finished building: top.elf.size'
+' '
+21:20:03 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+21:45:04 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrInit':
+../src/helloworld.c:39:31: warning: passing argument 1 of 'Xil_ExceptionRegisterHandler' makes integer from pointer without a cast [-Wint-conversion]
+  Xil_ExceptionRegisterHandler(&iI, (Xil_ExceptionHandler)XIntc_InterruptHandler, &gI);
+                               ^
+In file included from ../../top_bsp/microblaze_0/include/mb_interface.h:54:0,
+                 from ../../top_bsp/microblaze_0/include/xil_io.h:68,
+                 from ../../top_bsp/microblaze_0/include/xintc_l.h:99,
+                 from ../../top_bsp/microblaze_0/include/xintc.h:236,
+                 from ../src/helloworld.c:5:
+../../top_bsp/microblaze_0/include/xil_exception.h:114:13: note: expected 'u32 {aka long unsigned int}' but argument is of type 'XIntc * {aka struct <anonymous> *}'
+ extern void Xil_ExceptionRegisterHandler(u32 Id,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9740	    332	   3288	  13360	   3430	top.elf
+'Finished building: top.elf.size'
+' '
+21:45:09 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+21:48:30 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:19:2: warning: implicit declaration of function 'msleep' [-Wimplicit-function-declaration]
+  msleep(50);
+  ^~~~~~
+../src/helloworld.c:20:2: error: unterminated comment
+  /*
+  ^
+../src/helloworld.c:19:2: error: expected declaration or statement at end of input
+  msleep(50);
+  ^~~~~~
+../src/helloworld.c:18:6: warning: unused variable 'data' [-Wunused-variable]
+  u32 data = XGpio_DiscreteRead(&gI, 1);
+      ^~~~
+make: *** [src/helloworld.o] Error 1
+21:48:36 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:19:2: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  usleep(50);
+  ^~~~~~
+../src/helloworld.c:20:2: error: unterminated comment
+  /*
+  ^
+../src/helloworld.c:19:2: error: expected declaration or statement at end of input
+  usleep(50);
+  ^~~~~~
+../src/helloworld.c:18:6: warning: unused variable 'data' [-Wunused-variable]
+  u32 data = XGpio_DiscreteRead(&gI, 1);
+      ^~~~
+make: *** [src/helloworld.o] Error 1
+21:49:00 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:19:2: warning: implicit declaration of function 'MB_sleep' [-Wimplicit-function-declaration]
+  MB_sleep(50);
+  ^~~~~~~~
+../src/helloworld.c:20:2: error: unterminated comment
+  /*
+  ^
+../src/helloworld.c:19:2: error: expected declaration or statement at end of input
+  MB_sleep(50);
+  ^~~~~~~~
+../src/helloworld.c:18:6: warning: unused variable 'data' [-Wunused-variable]
+  u32 data = XGpio_DiscreteRead(&gI, 1);
+      ^~~~
+make: *** [src/helloworld.o] Error 1
+21:49:07 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:19:2: warning: implicit declaration of function 'MB_sleep' [-Wimplicit-function-declaration]
+  MB_sleep(50);
+  ^~~~~~~~
+../src/helloworld.c:21:2: error: unterminated comment
+  /*
+  ^
+../src/helloworld.c:19:2: error: expected declaration or statement at end of input
+  MB_sleep(50);
+  ^~~~~~~~
+../src/helloworld.c:18:6: warning: unused variable 'data' [-Wunused-variable]
+  u32 data = XGpio_DiscreteRead(&gI, 1);
+      ^~~~
+make: *** [src/helloworld.o] Error 1
+21:49:08 **** Incremental Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:19:2: warning: implicit declaration of function 'MB_sleep' [-Wimplicit-function-declaration]
+  MB_sleep(50);
+  ^~~~~~~~
+../src/helloworld.c:21:2: error: unterminated comment
+  /*
+  ^
+../src/helloworld.c:19:2: error: expected declaration or statement at end of input
+  MB_sleep(50);
+  ^~~~~~~~
+../src/helloworld.c:18:6: warning: unused variable 'data' [-Wunused-variable]
+  u32 data = XGpio_DiscreteRead(&gI, 1);
+      ^~~~
+make: *** [src/helloworld.o] Error 1
+21:49:23 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:19:2: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+  MB_Sleep(50);
+  ^~~~~~~~
+../src/helloworld.c:21:2: error: unterminated comment
+  /*
+  ^
+../src/helloworld.c:19:2: error: expected declaration or statement at end of input
+  MB_Sleep(50);
+  ^~~~~~~~
+../src/helloworld.c:18:6: warning: unused variable 'data' [-Wunused-variable]
+  u32 data = XGpio_DiscreteRead(&gI, 1);
+      ^~~~
+make: *** [src/helloworld.o] Error 1
+21:49:26 **** Incremental Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:19:2: warning: implicit declaration of function 'MB_Sleep' [-Wimplicit-function-declaration]
+  MB_Sleep(50);
+  ^~~~~~~~
+../src/helloworld.c:21:2: error: unterminated comment
+  /*
+  ^
+../src/helloworld.c:19:2: error: expected declaration or statement at end of input
+  MB_Sleep(50);
+  ^~~~~~~~
+../src/helloworld.c:18:6: warning: unused variable 'data' [-Wunused-variable]
+  u32 data = XGpio_DiscreteRead(&gI, 1);
+      ^~~~
+make: *** [src/helloworld.o] Error 1
+21:49:58 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:20:2: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+  MB_Sleep(50);
+  ^~~~~~~~
+In file included from ../src/helloworld.c:9:0:
+../../top_bsp/microblaze_0/include/microblaze_sleep.h:77:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+../src/helloworld.c:22:2: error: unterminated comment
+  /*
+  ^
+../src/helloworld.c:20:2: error: expected declaration or statement at end of input
+  MB_Sleep(50);
+  ^~~~~~~~
+../src/helloworld.c:19:6: warning: unused variable 'data' [-Wunused-variable]
+  u32 data = XGpio_DiscreteRead(&gI, 1);
+      ^~~~
+make: *** [src/helloworld.o] Error 1
+21:50:25 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:22:2: error: unterminated comment
+  /*
+  ^
+../src/helloworld.c:20:2: error: expected declaration or statement at end of input
+  usleep(1000);
+  ^~~~~~
+../src/helloworld.c:19:6: warning: unused variable 'data' [-Wunused-variable]
+  u32 data = XGpio_DiscreteRead(&gI, 1);
+      ^~~~
+make: *** [src/helloworld.o] Error 1
+21:50:27 **** Incremental Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:22:2: error: unterminated comment
+  /*
+  ^
+../src/helloworld.c:20:2: error: expected declaration or statement at end of input
+  usleep(1000);
+  ^~~~~~
+../src/helloworld.c:19:6: warning: unused variable 'data' [-Wunused-variable]
+  u32 data = XGpio_DiscreteRead(&gI, 1);
+      ^~~~
+make: *** [src/helloworld.o] Error 1
+21:50:33 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:19:6: warning: unused variable 'data' [-Wunused-variable]
+  u32 data = XGpio_DiscreteRead(&gI, 1);
+      ^~~~
+../src/helloworld.c: In function 'IntrInit':
+../src/helloworld.c:44:31: warning: passing argument 1 of 'Xil_ExceptionRegisterHandler' makes integer from pointer without a cast [-Wint-conversion]
+  Xil_ExceptionRegisterHandler(&iI, (Xil_ExceptionHandler)XIntc_InterruptHandler, &gI);
+                               ^
+In file included from ../../top_bsp/microblaze_0/include/mb_interface.h:54:0,
+                 from ../../top_bsp/microblaze_0/include/xil_io.h:68,
+                 from ../../top_bsp/microblaze_0/include/xintc_l.h:99,
+                 from ../../top_bsp/microblaze_0/include/xintc.h:236,
+                 from ../src/helloworld.c:5:
+../../top_bsp/microblaze_0/include/xil_exception.h:114:13: note: expected 'u32 {aka long unsigned int}' but argument is of type 'XIntc * {aka struct <anonymous> *}'
+ extern void Xil_ExceptionRegisterHandler(u32 Id,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6068	    328	   3284	   9680	   25d0	top.elf
+'Finished building: top.elf.size'
+' '
+21:50:38 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+21:51:01 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrInit':
+../src/helloworld.c:47:31: warning: passing argument 1 of 'Xil_ExceptionRegisterHandler' makes integer from pointer without a cast [-Wint-conversion]
+  Xil_ExceptionRegisterHandler(&iI, (Xil_ExceptionHandler)XIntc_InterruptHandler, &gI);
+                               ^
+In file included from ../../top_bsp/microblaze_0/include/mb_interface.h:54:0,
+                 from ../../top_bsp/microblaze_0/include/xil_io.h:68,
+                 from ../../top_bsp/microblaze_0/include/xintc_l.h:99,
+                 from ../../top_bsp/microblaze_0/include/xintc.h:236,
+                 from ../src/helloworld.c:5:
+../../top_bsp/microblaze_0/include/xil_exception.h:114:13: note: expected 'u32 {aka long unsigned int}' but argument is of type 'XIntc * {aka struct <anonymous> *}'
+ extern void Xil_ExceptionRegisterHandler(u32 Id,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9752	    332	   3284	  13368	   3438	top.elf
+'Finished building: top.elf.size'
+' '
+21:51:04 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+21:51:38 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:20:2: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+  MB_Sleep(50);
+  ^~~~~~~~
+In file included from ../src/helloworld.c:9:0:
+../../top_bsp/microblaze_0/include/microblaze_sleep.h:77:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+../src/helloworld.c: In function 'IntrInit':
+../src/helloworld.c:47:31: warning: passing argument 1 of 'Xil_ExceptionRegisterHandler' makes integer from pointer without a cast [-Wint-conversion]
+  Xil_ExceptionRegisterHandler(&iI, (Xil_ExceptionHandler)XIntc_InterruptHandler, &gI);
+                               ^
+In file included from ../../top_bsp/microblaze_0/include/mb_interface.h:54:0,
+                 from ../../top_bsp/microblaze_0/include/xil_io.h:68,
+                 from ../../top_bsp/microblaze_0/include/xintc_l.h:99,
+                 from ../../top_bsp/microblaze_0/include/xintc.h:236,
+                 from ../src/helloworld.c:5:
+../../top_bsp/microblaze_0/include/xil_exception.h:114:13: note: expected 'u32 {aka long unsigned int}' but argument is of type 'XIntc * {aka struct <anonymous> *}'
+ extern void Xil_ExceptionRegisterHandler(u32 Id,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9752	    332	   3284	  13368	   3438	top.elf
+'Finished building: top.elf.size'
+' '
+21:51:42 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+21:52:16 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'IntrHandler':
+../src/helloworld.c:20:2: warning: 'MB_Sleep' is deprecated [-Wdeprecated-declarations]
+  MB_Sleep(50);
+  ^~~~~~~~
+In file included from ../src/helloworld.c:9:0:
+../../top_bsp/microblaze_0/include/microblaze_sleep.h:77:6: note: declared here
+ void MB_Sleep(u32 MilliSeconds) __attribute__((__deprecated__));
+      ^~~~~~~~
+../src/helloworld.c: In function 'IntrInit':
+../src/helloworld.c:43:31: warning: passing argument 1 of 'Xil_ExceptionRegisterHandler' makes integer from pointer without a cast [-Wint-conversion]
+  Xil_ExceptionRegisterHandler(&iI, (Xil_ExceptionHandler)XIntc_InterruptHandler, &gI);
+                               ^
+In file included from ../../top_bsp/microblaze_0/include/mb_interface.h:54:0,
+                 from ../../top_bsp/microblaze_0/include/xil_io.h:68,
+                 from ../../top_bsp/microblaze_0/include/xintc_l.h:99,
+                 from ../../top_bsp/microblaze_0/include/xintc.h:236,
+                 from ../src/helloworld.c:5:
+../../top_bsp/microblaze_0/include/xil_exception.h:114:13: note: expected 'u32 {aka long unsigned int}' but argument is of type 'XIntc * {aka struct <anonymous> *}'
+ extern void Xil_ExceptionRegisterHandler(u32 Id,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9796	    332	   3288	  13416	   3468	top.elf
+'Finished building: top.elf.size'
+' '
+21:52:19 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
