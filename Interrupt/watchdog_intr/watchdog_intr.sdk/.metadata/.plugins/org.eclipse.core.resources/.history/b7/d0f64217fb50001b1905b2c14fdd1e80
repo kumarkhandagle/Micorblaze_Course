@@ -1,0 +1,29 @@
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xwdttb.h"
+#include "xintc.h"
+#include "xparameters.h"
+
+XWdtTb_Config *wC;
+XWdtTb wI;
+
+void IntrInit(){
+	wC= XWdtTb_LookupConfig(XPAR_AXI_TIMEBASE_WDT_0_DEVICE_ID);
+	s32 status = XWdtTb_CfgInitialize(&wI, wC, wC->BaseAddr);
+	if(status == XST_SUCCESS)
+	{
+		xil_printf("WDT Successfully Initalized");
+	}
+}
+
+int main()
+{
+    init_platform();
+
+    print("Hello World\n\r");
+
+    cleanup_platform();
+    return 0;
+}

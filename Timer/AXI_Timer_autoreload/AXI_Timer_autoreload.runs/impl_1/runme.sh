@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/labview/project_117/project_117.runs/impl_1'
+HD_PWD='D:/Microblaze COde/Micorblaze_Course/Timer/AXI_Timer_autoreload/AXI_Timer_autoreload.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

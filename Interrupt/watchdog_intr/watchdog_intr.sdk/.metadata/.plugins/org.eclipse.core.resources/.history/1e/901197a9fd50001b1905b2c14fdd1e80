@@ -1,0 +1,59 @@
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xwdttb.h"
+#include "xintc.h"
+#include "xparameters.h"
+#include "xil_exception.h"
+
+XWdtTb_Config *wC;
+XWdtTb wI;
+
+XIntc iI;
+
+void IntrHandler(){
+    microblaze_disable_interrupts();
+    (*((void (*)())(0x00)))();
+}
+
+void wdtInit(){
+	wC= XWdtTb_LookupConfig(XPAR_AXI_TIMEBASE_WDT_0_DEVICE_ID);
+	s32 status = XWdtTb_CfgInitialize(&wI, wC, wC->BaseAddr);
+	if(status == XST_SUCCESS)
+	{
+		xil_printf("WDT Successfully Initialized\n");
+	}
+}
+
+void IntrInit(){
+	int status = XIntc_Initialize(&iI, XPAR_AXI_INTC_0_DEVICE_ID);
+	if(status == XST_SUCCESS)
+	{
+		xil_printf("Interrupt Controller Initialized Successfully\n");
+	}
+
+
+	XIntc_Connect(&iI, XPAR_AXI_INTC_0_AXI_TIMEBASE_WDT_0_WDT_INTERRUPT_INTR, (XInterruptHandler)IntrHandler, &wI);
+	XIntc_Enable(&iI, XPAR_AXI_INTC_0_AXI_TIMEBASE_WDT_0_WDT_INTERRUPT_INTR);
+	XIntc_Start(&iI, XIN_REAL_MODE);
+
+	Xil_ExceptionInit();
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler)XIntc_InterruptHandler, &iI);
+	Xil_ExceptionEnable();
+
+}
+
+int main()
+{
+    init_platform();
+    wdtInit();
+    IntrInit();
+    XWdtTb_Stop(&wI);
+    XWdtTb_Start(&wI);
+
+    print("Hello World\n\r");
+
+    cleanup_platform();
+    return 0;
+}
