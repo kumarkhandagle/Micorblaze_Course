@@ -1,0 +1,8 @@
+set_property IOSTANDARD LVCMOS33 [get_ports {led[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[0]}]
+set_property PACKAGE_PIN V11 [get_ports {led[3]}]
+set_property PACKAGE_PIN V12 [get_ports {led[2]}]
+set_property PACKAGE_PIN V14 [get_ports {led[1]}]
+set_property PACKAGE_PIN V15 [get_ports {led[0]}]

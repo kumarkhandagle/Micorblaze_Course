@@ -1,0 +1,777 @@
+00:06:47 **** Build of project top_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_5/src"
+make -C microblaze_0/libsrc/standalone_v6_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartns550_v3_5/src"
+make -C microblaze_0/libsrc/uartns550_v3_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_5/src"
+make -C microblaze_0/libsrc/standalone_v6_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/uartns550_v3_5/src"
+make -C microblaze_0/libsrc/uartns550_v3_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartns550"
+xuartns550_g.c:53:2: warning: missing initializer for field 'DefaultBaudRate' of 'XUartNs550_Config {aka struct <anonymous>}' [-Wmissing-field-initializers]
+  }
+  ^
+In file included from xuartns550_g.c:41:0:
+xuartns550.h:323:6: note: 'DefaultBaudRate' declared here
+  u32 DefaultBaudRate; /**< Baud Rate in bps, ie 1200 */
+      ^~~~~~~~~~~~~~~
+'Finished building libraries'
+00:06:55 **** Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3196	    268	   3112	   6576	   19b0	top.elf
+'Finished building: top.elf.size'
+' '
+00:07:50 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3196	    268	   3112	   6576	   19b0	top.elf
+'Finished building: top.elf.size'
+' '
+00:10:11 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uartInit':
+../src/helloworld.c:13:7: error: too few arguments to function 'XUartNs550_LookupConfig'
+  uC = XUartNs550_LookupConfig();
+       ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:411:20: note: declared here
+ XUartNs550_Config *XUartNs550_LookupConfig(u16 DeviceId);
+                    ^~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+00:10:29 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3196	    268	   3112	   6576	   19b0	top.elf
+'Finished building: top.elf.size'
+' '
+00:11:05 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3196	    268	   3112	   6576	   19b0	top.elf
+'Finished building: top.elf.size'
+' '
+00:14:59 **** Incremental Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3196	    268	   3112	   6576	   19b0	top.elf
+'Finished building: top.elf.size'
+' '
+00:15:27 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+00:15:44 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+00:21:15 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5056	    288	   3192	   8536	   2158	top.elf
+'Finished building: top.elf.size'
+' '
+00:21:36 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+00:22:52 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29428	   1328	   3252	  34008	   84d8	top.elf
+'Finished building: top.elf.size'
+' '
+00:22:55 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+00:23:08 **** Incremental Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5056	    288	   3192	   8536	   2158	top.elf
+'Finished building: top.elf.size'
+' '
+00:23:47 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5232	    288	   3192	   8712	   2208	top.elf
+'Finished building: top.elf.size'
+' '
+00:23:51 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+00:33:33 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5744	    288	   3224	   9256	   2428	top.elf
+'Finished building: top.elf.size'
+' '
+00:33:36 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+00:33:50 **** Incremental Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5744	    288	   3224	   9256	   2428	top.elf
+'Finished building: top.elf.size'
+' '
+00:35:03 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5748	    288	   3228	   9264	   2430	top.elf
+'Finished building: top.elf.size'
+' '
+00:35:09 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+00:35:22 **** Incremental Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5748	    288	   3228	   9264	   2430	top.elf
+'Finished building: top.elf.size'
+' '
+00:35:46 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9024	    292	   3228	  12544	   3100	top.elf
+'Finished building: top.elf.size'
+' '
+00:35:47 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+00:44:59 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:30:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,1);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9064	    292	   3228	  12584	   3128	top.elf
+'Finished building: top.elf.size'
+' '
+00:45:02 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:30:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9064	    292	   3228	  12584	   3128	top.elf
+'Finished building: top.elf.size'
+' '
+00:45:10 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+00:45:59 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:30:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5788	    288	   3228	   9304	   2458	top.elf
+'Finished building: top.elf.size'
+' '
+00:46:05 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+00:48:54 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:33:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6540	    288	   3228	  10056	   2748	top.elf
+'Finished building: top.elf.size'
+' '
+00:49:47 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:33:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+../src/helloworld.c:44:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &drecv,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6600	    288	   3224	  10112	   2780	top.elf
+'Finished building: top.elf.size'
+' '
+00:49:51 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+00:50:50 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:33:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9876	    292	   3232	  13400	   3458	top.elf
+'Finished building: top.elf.size'
+' '
+00:50:59 **** Incremental Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:33:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9880	    292	   3228	  13400	   3458	top.elf
+'Finished building: top.elf.size'
+' '
+00:51:12 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:33:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   9892	    292	   3232	  13416	   3468	top.elf
+'Finished building: top.elf.size'
+' '
+00:51:16 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+00:51:52 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:36:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10684	    292	   3232	  14208	   3780	top.elf
+'Finished building: top.elf.size'
+' '
+00:52:10 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:36:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10724	    292	   3232	  14248	   37a8	top.elf
+'Finished building: top.elf.size'
+' '
+00:52:14 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+00:56:11 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:35:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+../src/helloworld.c:47:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &drecv,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6600	    288	   3224	  10112	   2780	top.elf
+'Finished building: top.elf.size'
+' '
+00:56:24 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+00:59:40 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:36:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+../src/helloworld.c:50:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &drecv,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7432	    288	   3224	  10944	   2ac0	top.elf
+'Finished building: top.elf.size'
+' '
+00:59:44 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+01:00:02 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+01:00:43 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:36:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+../src/helloworld.c:50:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &drecv,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7444	    288	   3228	  10960	   2ad0	top.elf
+'Finished building: top.elf.size'
+' '
+01:00:46 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+01:01:38 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:36:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10724	    292	   3232	  14248	   37a8	top.elf
+'Finished building: top.elf.size'
+' '
+01:01:39 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
+01:03:00 **** Auto Build of configuration Debug for project top ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../top_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:36:26: warning: passing argument 2 of 'XUartNs550_Send' from incompatible pointer type [-Wincompatible-pointer-types]
+     XUartNs550_Send(&uI, &data,10);
+                          ^
+In file included from ../src/helloworld.c:5:0:
+../../top_bsp/microblaze_0/include/xuartns550.h:419:14: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[10] {aka unsigned char (*)[10]}'
+ unsigned int XUartNs550_Send(XUartNs550 *InstancePtr, u8 *BufferPtr,
+              ^~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: top.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../top_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "top.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: top.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size top.elf  |tee "top.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  10724	    292	   3232	  14248	   37a8	top.elf
+'Finished building: top.elf.size'
+' '
+01:03:08 **** Incremental Build of configuration Debug for project top ****
+make all 
+make: Nothing to be done for `all'.
